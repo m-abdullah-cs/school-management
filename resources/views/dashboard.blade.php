@@ -245,8 +245,8 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                    
-                        @forelse($markAttendances as $user)
+                        @isset($markAttendances)
+                            @forelse($markAttendances as $user)
                                 <tr>
                                     <td class="px-4 py-2 text-sm text-gray-700">{{ $user->id }}</td>
                                
@@ -276,6 +276,7 @@
                                     <td colspan="6" class="px-4 py-4 text-center text-sm text-gray-500">No users found.</td>
                                 </tr>
                             @endforelse
+                        @endisset
 
                         </tbody>
                     </table>
